@@ -1,0 +1,66 @@
+{
+  "name": "prakashhalder/maatwebsite-excel",
+  "description": "Supercharged Excel exports in Laravel",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "phpexcel",
+    "excel",
+    "csv",
+    "export",
+    "import",
+    "batch"
+  ],
+  "authors": [
+    {
+      "name": "Maatwebsite.nl",
+      "email": "patrick@maatwebsite.nl"
+    }
+  ],
+  "require": {
+    "php": "^8.0.2",
+    "phpoffice/phpspreadsheet": "^1.28",
+    "illuminate/cache": "^9.0|^10.0",
+    "illuminate/config": "^9.0|^10.0",
+    "illuminate/filesystem": "^9.0|^10.0",
+    "illuminate/support": "^9.0|^10.0",
+    "opis/closure": "^3.6.3",
+    "nesbot/carbon": "2.66.0",
+    "tijsverkoyen/css-to-inline-styles": "2.2.6"
+  },
+  "require-dev": {
+    "phpseclib/phpseclib": "3.0.19",
+    "phpunit/phpunit": "*",
+    "mockery/mockery": "*",
+    "orchestra/testbench": "8.3.0"
+  },
+  "suggest": {
+    "illuminate/http": "^9.0|^10.0",
+    "illuminate/routing": "^9.0|^10.0",
+    "illuminate/view": "^9.0|^10.0",
+    "illuminate/queue": "^9.0|^10.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/Maatwebsite/Excel"
+    ],
+    "psr-0": {
+      "Maatwebsite\\Excel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
+  "extra": {
+        "laravel": {
+            "providers": [
+                "Maatwebsite\\Excel\\ExcelServiceProvider"
+            ],
+            "aliases": {
+                "Excel": "Maatwebsite\\Excel\\Facades\\Excel"
+            }
+        }
+    }
+}
